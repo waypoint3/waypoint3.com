@@ -1,11 +1,18 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider as NextThemeProvider } from "next-themes";
+import {AppCacheProvider} from "@mui/material-nextjs/v13-pagesRouter";
+import {ThemeProvider} from "@mui/material/styles";
+import theme from "@/app/theme";
 
 export function Providers({ children }: { children: React.ReactNode }) {
     return (
-        <ThemeProvider attribute="class" disableTransitionOnChange>
-            {children}
-        </ThemeProvider>
+        <AppCacheProvider>
+            <ThemeProvider theme={theme}>
+            <NextThemeProvider attribute="class" disableTransitionOnChange>
+                {children}
+            </NextThemeProvider>
+            </ThemeProvider>
+        </AppCacheProvider>
     );
 }
