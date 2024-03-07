@@ -1,5 +1,11 @@
 import {Container} from "@radix-ui/themes";
 import PageTitle from "@/app/components/PageTitle";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Privacy policy | waypoint3 - Software development consultancy",
+    description: "Software development consultancy services to empower your business"
+}
 
 export default function Page() {
     return (

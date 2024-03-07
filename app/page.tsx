@@ -1,8 +1,8 @@
 import {Metadata} from "next";
 import Image from "next/image";
 
-const metadata: Metadata = {
-    title: "Waypoint3 - Software development consultancy",
+export const metadata: Metadata = {
+    title: "waypoint3 - Software development consultancy",
     description: "Software development consultancy services to empower your business"
 }
 
