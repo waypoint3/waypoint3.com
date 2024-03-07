@@ -6,27 +6,39 @@ import Link from "next/link";
 import NavigationDesktop from "@/app/components/Header/NavigationDesktop";
 import NavigationMobile from "@/app/components/Header/NavigationMobile";
 import {useState} from "react";
+import LogoWhite from "@/app/components/LogoWhite";
+import {useRouter} from "next/navigation";
 
-export const navigationItems = [
+export interface NavigationItem {
+    href: string
+    title: string
+}
+export const navigationItems: NavigationItem[] = [
     {href: "/services", title: "Our Services"},
     {href: "/contact", title: "Get In Touch"},
 ];
 
 export default function Header() {
     const [isOpen, setOpen] = useState(false);
+    const router = useRouter();
+
+    const handleClick = (item: NavigationItem) => {
+        setOpen(false);
+        router.push(item.href);
+    }
     return (
-        <div className={`${isOpen ? 'from-purple-500 to-pink-600 bg-gradient-to-r' : 'bg-white'}`}>
+        <div className={`${isOpen ? 'bg-gray-700' : 'bg-white'}`}>
             <Container>
-                <div className={"p-3 md:px-3 md:py-0 relative flex justify-between md:justify-start"}>
+                <div className={"p-3 md:px-3 md:py-0 relative flex justify-between items-center md:justify-start"}>
                     <Link href={"/"} className={"py-1"}>
                         {isOpen ?
-                            <Logo containerClassName={"text-white"}/>
+                            <LogoWhite/>
                             :
                             <Logo/>
                         }
 
                     </Link>
-                    <div onClick={() => setOpen(!isOpen)} className={`md:hidden p-2 ${isOpen ? 'text-white' : 'text-pink-600'}`}>
+                    <div onClick={() => setOpen(!isOpen)} className={`md:hidden p-2 ${isOpen ? 'text-white' : 'text-green-600'}`}>
                         {isOpen ?
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -39,7 +51,7 @@ export default function Header() {
                     </div>
                     <NavigationDesktop/>
                 </div>
-                <NavigationMobile open={isOpen}/>
+                <NavigationMobile open={isOpen} onClick={handleClick}/>
             </Container>
         </div>
     )

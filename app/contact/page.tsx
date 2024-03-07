@@ -10,7 +10,7 @@ export default function Page() {
                     <h1>Get in touch</h1>
                 </Container>
             </PageTitle>
-            <Container>
+            <Container className={"p-3 md:p-0"}>
                 <ContactForm/>
             </Container>
         </main>

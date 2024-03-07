@@ -9,7 +9,7 @@ export default function Page() {
                     <h1>Terms and Conditions</h1>
                 </Container>
             </PageTitle>
-            <Container className={"text-sm leading-loose"}>
+            <Container className={"text-sm leading-loose px-3 md:px-0"}>
                 <p className={"text-right italic my-3"}>Last updated: March 06, 2024</p>
                 <p>Please read these terms and conditions carefully before using Our Service.</p>
                 <h2 className={"font-display text-2xl mb-1 mt-2"}>Interpretation and Definitions</h2>

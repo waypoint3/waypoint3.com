@@ -14,13 +14,13 @@ export default function NavigationDesktop() {
                     <li key={item.href}>
                         <Link href={item.href} className={`
                                     py-5 px-3 block font-display uppercase font-semibold transition-colors 
-                                    text-sm hover:bg-purple-500
+                                    text-sm hover:bg-gray-500
                                     hover:text-white
                                     relative
-                                    ${isActive(item.href) ? 'bg-purple-500 hover:bg-pink-500 text-white' : ''}
+                                    ${isActive(item.href) ? 'bg-gray-500 hover:bg-gray-500 text-white' : ''}
                                     `}>
                             {item.title}
-                            {isActive(item.href) ? <span className={"absolute bg-purple-500 rotate-45 -bottom-2 left-1/2 -ml-1 h-4 w-4"}></span> : ''}
+                            {isActive(item.href) ? <span className={"absolute bg-gray-500 rotate-45 -bottom-2 left-1/2 -ml-1 h-4 w-4"}></span> : ''}
                         </Link>
                     </li>
                 ))}

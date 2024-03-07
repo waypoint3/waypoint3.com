@@ -11,7 +11,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <body className={"bg-purple-500 from-purple-500 to-pink-600 bg-gradient-to-r"}>
+        <body className={"bg-gray-800"}>
         <Providers>
             <Theme>
                 <Header/>

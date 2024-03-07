@@ -2,8 +2,8 @@
 
 import {Container, Flex, Text} from "@radix-ui/themes";
 import moment from "moment";
-import Logo from "@/app/components/Logo";
 import Link from "next/link";
+import LogoWhite from "@/app/components/LogoWhite";
 
 const morePages = [
     {href: "/privacy", text: "Privacy policy"},
@@ -13,9 +13,9 @@ const morePages = [
 export default function Footer() {
     return (
         <Container>
-            <div className={"flex p-5 gap-10 text-white text-sm flex-col md:flex-row md:items-center"}>
+            <div className={"flex p-5 gap-5 md:gap-10 text-white text-sm flex-col md:flex-row md:items-center"}>
                 <div>
-                    <Logo topClassName={"text-xl"} bottomClassName={"text-sm"} />
+                    <LogoWhite className={"w-24"}/>
                 </div>
                 <div className={"flex-1"}>
                     <ul>
