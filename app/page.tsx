@@ -21,18 +21,18 @@ export default function Home() {
         <div className={"flex md:justify-around md:py-10 text-center flex-col gap-10 px-3 mt-10 md:flex-row md:mt-0"}>
             <div className={"flex flex-col items-center gap-5"}>
                 <BsRocketTakeoff className={"w-32 h-32"}/>
-                <h2 className={"text-3xl font-semibold"}>Innovative</h2>
-                <p>Pioneering cutting-edge solutions, driving innovation in software development</p>
+                <h2 className={"text-2xl md:text-3xl font-semibold"}>Innovative</h2>
+                <p className={"text-lg"}>Pioneering cutting-edge solutions, driving innovation in software development</p>
             </div>
             <div className={"flex flex-col items-center gap-5"}>
                 <FaChartLine className={"w-32 h-32"}/>
-                <h2 className={"text-3xl font-semibold"}>Scalable</h2>
-                <p>Solutions designed to grow with your business, ensuring scalability and future-proofing</p>
+                <h2 className={"text-2xl md:text-3xl font-semibold"}>Scalable</h2>
+                <p className={"text-lg"}>Solutions designed to grow with your business, ensuring scalability and future-proofing</p>
             </div>
             <div className={"flex flex-col items-center gap-5"}>
                 <IoMdStopwatch className={"w-32 h-32"}/>
-                <h2 className={"text-3xl font-semibold"}>Efficiency</h2>
-                <p>Optimising processes to deliver efficient, streamlined software development solutions</p>
+                <h2 className={"text-2xl md:text-3xl font-semibold"}>Efficient</h2>
+                <p className={"text-lg"}>Optimising processes to deliver efficient, streamlined software development solutions</p>
             </div>
         </div>
         </Container>
