@@ -8,7 +8,7 @@ export async function POST(request: Request) {
         const response = await mg.messages.create('mail.waypoint3.com', {
             from: "noreply@mail.waypoint3.com",
             to: ["help@waypoint3.com"],
-            subject: "Test",
+            subject: "Waypoint3 contact form",
             text: `New contact form on waypoint3.com\n\n---------------------------\n`
             + `Name: ${formData.get('name')}\n`
             + `Email: ${formData.get('emailAddress')}\n`
