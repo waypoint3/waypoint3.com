@@ -23,33 +23,33 @@ export default function Page() {
                 <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
                 <h3 className={"font-display text-xl"}>Definitions</h3>
                 <p>For the purposes of these Terms and Conditions:</p>
-                <ul className={"list-disc"}>
+                <ul className={"list-disc list-inside"}>
                     <li>
-                        <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
+                        <strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
                     </li>
                     <li>
-                        <p><strong>Country</strong> refers to:  United Kingdom</p>
+                        <strong>Country</strong> refers to:  United Kingdom
                     </li>
                     <li>
-                        <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Waypoint3, 21 Frensham Avenue, Leeds, LS27 0RP, England.</p>
+                        <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Waypoint3, 21 Frensham Avenue, Leeds, LS27 0RP, England.
                     </li>
                     <li>
-                        <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
+                        <strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.
                     </li>
                     <li>
-                        <p><strong>Service</strong> refers to the Website.</p>
+                        <strong>Service</strong> refers to the Website.
                     </li>
                     <li>
-                        <p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">Terms and Conditions Generator</a>.</p>
+                        <strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank">Terms and Conditions Generator</a>.
                     </li>
                     <li>
-                        <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
+                        <strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
                     </li>
                     <li>
-                        <p><strong>Website</strong> refers to Waypoint3, accessible from <a href="https://waypoint3.com" rel="external nofollow noopener" target="_blank">https://waypoint3.com</a></p>
+                        <strong>Website</strong> refers to Waypoint3, accessible from <a href="https://waypoint3.com" rel="external nofollow noopener" target="_blank">https://waypoint3.com</a>
                     </li>
                     <li>
-                        <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+                        <strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
                     </li>
                 </ul>
                 <h2 className={"font-display text-2xl mb-1 mt-2"}>Acknowledgment</h2>
@@ -94,7 +94,7 @@ export default function Page() {
                 <p>By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.</p>
                 <h2 className={"font-display text-2xl mb-1 mt-2"}>Contact Us</h2>
                 <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
-                <ul className={"list-disc"}>
+                <ul className={"list-disc list-inside"}>
                     <li>By visiting this page on our website: <a href="https://waypoint3.com/contact" rel="external nofollow noopener" target="_blank">https://waypoint3.com/contact</a></li>
                 </ul>
             </Container>

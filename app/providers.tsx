@@ -1,6 +1,5 @@
 "use client";
 
-import { ThemeProvider as NextThemeProvider } from "next-themes";
 import {AppCacheProvider} from "@mui/material-nextjs/v13-pagesRouter";
 import {ThemeProvider} from "@mui/material/styles";
 import theme from "@/app/theme";
