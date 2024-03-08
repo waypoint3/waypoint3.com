@@ -4,7 +4,7 @@ import {Providers} from "@/app/providers";
 import {Theme} from "@radix-ui/themes";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 export default function RootLayout({
        children,
    }: Readonly<{
@@ -24,6 +24,7 @@ export default function RootLayout({
         </Providers>
         </body>
         <GoogleAnalytics gaId={"G-WMW0WG8KW1"}/>
+        <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
         </html>
     );
 }
