@@ -34,7 +34,7 @@ export default function Header() {
         <div className={`${isOpen ? 'bg-gray-700' : 'bg-white'}`}>
             <Container>
                 <div className={"p-3 md:px-3 md:py-0 relative flex justify-between items-center md:justify-start"}>
-                    <Link onClick={handleLogoClick} href={"/"} className={"py-1"}>
+                    <Link onClick={handleLogoClick} href={"/"} className={"py-1"} aria-label={"Go to the waypoint3 home page"}>
                         {isOpen ?
                             <LogoWhite/>
                             :

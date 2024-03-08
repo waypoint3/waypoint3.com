@@ -75,7 +75,7 @@ export default function Page() {
                     ))}
                 </div>
                 <div className={"text-center my-5"}>
-                    <Link href={"/contact"} className={"bg-green-500 text-white px-3 py-2 rounded-xl font-semibold text-lg"}>Contact us today</Link>
+                    <Link href={"/contact"} className={"bg-green-600 text-white px-3 py-2 rounded-xl font-semibold text-lg"}>Contact us today</Link>
                 </div>
             </Container>
         </main>
