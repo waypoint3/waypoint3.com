@@ -32,7 +32,7 @@ const services = [
     {
         icon: <MdElderly className={"w-20 h-20"}/>,
         title: "Legacy System Modernisation",
-        text: "Upgrading and modernizing outdated software systems to improve functionality, enhance user experience, and align with current business needs",
+        text: "Upgrading and modernising outdated software systems to improve functionality, enhance user experience, and align with current business needs",
     },
     {
         icon: <FaCloud className={"w-20 h-20"}/>,
@@ -66,7 +66,7 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container>
-                <div className={"grid md:grid-cols-4 gap-10 my-10"}>
+                <div className={"grid md:grid-cols-4 gap-10 my-10 px-3 md:px-0"}>
                     {services.map(service => (
                         <div key={service.title} className={"text-center flex flex-col gap-1 items-center"}>
                             {service.icon}
