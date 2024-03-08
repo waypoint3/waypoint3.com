@@ -69,7 +69,7 @@ export default function Page() {
                     {services.map(service => (
                         <div key={service.title} className={"text-center flex flex-col gap-1 items-center"}>
                             {service.icon}
-                            <h2 className={"font-display text-xl"}>{service.title}</h2>
+                            <h2 className={"font-display text-2xl"}>{service.title}</h2>
                             <p className={"text-sm"}>{service.text}</p>
                         </div>
                     ))}
