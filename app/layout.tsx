@@ -23,7 +23,6 @@ export default function RootLayout({
             </Theme>
         </Providers>
         </body>
-        <GoogleAnalytics gaId={"G-WMW0WG8KW1"}/>
         <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
         </html>
     );
