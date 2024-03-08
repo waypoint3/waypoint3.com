@@ -2,8 +2,7 @@ import PageTitle from "@/app/components/PageTitle";
 import {Container} from "@radix-ui/themes";
 import {Metadata} from "next";
 import Waypoint3 from "@/app/components/Waypoint3";
-import {FaChartBar, FaCloud, FaCode, FaServer} from "react-icons/fa";
-import {FaPeopleGroup} from "react-icons/fa6";
+import {FaCloud, FaCode, FaProjectDiagram, FaServer} from "react-icons/fa";
 import {MdConstruction, MdContactSupport, MdElderly, MdHandshake, MdHelp, MdOutlineSupport} from "react-icons/md";
 import Link from "next/link";
 
@@ -40,7 +39,7 @@ const services = [
         text: "Assisting clients in leveraging cloud computing platforms to optimize infrastructure, improve scalability, and reduce operational costs",
     },
     {
-        icon: <FaChartBar className={"w-20 h-20"}/>,
+        icon: <FaProjectDiagram className={"w-20 h-20"}/>,
         title: "Project Management",
         text: "Overseeing software development projects from inception to completion, ensuring timely delivery and adherence to quality standards"
     },
