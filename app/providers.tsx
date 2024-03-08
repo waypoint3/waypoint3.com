@@ -9,9 +9,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     return (
         <AppCacheProvider>
             <ThemeProvider theme={theme}>
-            <NextThemeProvider attribute="class" disableTransitionOnChange>
                 {children}
-            </NextThemeProvider>
             </ThemeProvider>
         </AppCacheProvider>
     );
