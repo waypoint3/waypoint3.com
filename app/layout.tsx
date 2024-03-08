@@ -1,9 +1,10 @@
 import '@radix-ui/themes/styles.css';
 import "./globals.css";
 import {Providers} from "@/app/providers";
-import {Text, Theme} from "@radix-ui/themes";
+import {Theme} from "@radix-ui/themes";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 export default function RootLayout({
        children,
    }: Readonly<{
@@ -22,6 +23,7 @@ export default function RootLayout({
             </Theme>
         </Providers>
         </body>
+        <GoogleAnalytics gaId={"G-WMW0WG8KW1"}/>
         </html>
     );
 }
