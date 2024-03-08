@@ -19,8 +19,8 @@ export default function NavigationMobile({open = false, onClick}: NavigationMobi
                 {navigationItems.map(item => (
                     <li key={item.href}>
                         <Link href={item.href} onClick={() => onClick(item)} className={`
-                            px-3 py-1 block font-display uppercase transition-colors 
-                            text-white 
+                            px-3 py-2 block font-display uppercase transition-colors 
+                            text-white text-xl
                             relative
                             `}>
                             {item.title}

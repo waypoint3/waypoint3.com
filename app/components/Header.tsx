@@ -26,11 +26,15 @@ export default function Header() {
         setOpen(false);
         router.push(item.href);
     }
+    const handleLogoClick = () => {
+        setOpen(false);
+        router.push("/");
+    }
     return (
         <div className={`${isOpen ? 'bg-gray-700' : 'bg-white'}`}>
             <Container>
                 <div className={"p-3 md:px-3 md:py-0 relative flex justify-between items-center md:justify-start"}>
-                    <Link href={"/"} className={"py-1"}>
+                    <Link onClick={handleLogoClick} href={"/"} className={"py-1"}>
                         {isOpen ?
                             <LogoWhite/>
                             :
