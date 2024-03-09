@@ -15,7 +15,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      display: ['Oswald', 'sans'],
+      sans: ['var(--font-roboto)'],
+      display: ['var(--font-oswald)'],
     },
   },
   plugins: [],

@@ -17,7 +17,7 @@ export default function Home() {
     <main>
         <div className={"bg-cover md:h-80 h-64 bg-center relative overflow-hidden bg-black flex items-center justify-center"}>
             <h1 className={"relative z-10 text-center text-white font-display text-5xl md:text-6xl"}>Charting the Course to Digital <span className={"text-green-600"}>Success</span></h1>
-            <Image src={"/img/compass-5137269_1280.jpg"} alt={""} width={1280} height={853} className={"absolute w-full z-0 opacity-50 object-fill"} />
+            <Image src={"/img/compass-5137269_1280.jpg"} loading={"eager"} alt={"Image of a compass"} width={1280} height={853} className={"absolute w-full z-0 opacity-50 object-fill"} />
         </div>
         <Container>
         <div className={"flex md:justify-around md:py-10 text-center flex-col gap-10 px-3 mt-10 md:flex-row md:mt-0"}>
