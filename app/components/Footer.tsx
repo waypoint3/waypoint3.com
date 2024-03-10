@@ -18,7 +18,7 @@ export default function Footer() {
                     <LogoWhite className={"w-24"}/>
                 </div>
                 <div className={"flex-1"}>
-                    <ul>
+                    <ul className={"flex gap-4 md:gap-5"}>
                         {morePages.map(link => (
                             <li key={link.href}><Link href={link.href} className={"hover:text-pink-200"}>{link.text}</Link></li>
                         ))}
