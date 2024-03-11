@@ -25,7 +25,7 @@ export default function Footer() {
                         ))}
                     </ul>
                 </div>
-                <div className={"flex flex-col gap-2 items-end"}>
+                <div className={"flex flex-col gap-2 items-start md:items-end"}>
                     <div className={"flex items-center gap-4"}>
                         <Link href={"https://www.linkedin.com/company/waypoint3"} target={"_blank"} aria-label={"Visit the Waypoint3 LinkedIn page"}>
                             <FaLinkedin className={"w-8 h-8"}/>
