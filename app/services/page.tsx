@@ -5,6 +5,7 @@ import Waypoint3 from "@/app/components/Waypoint3";
 import {FaCloud, FaCode, FaProjectDiagram, FaServer} from "react-icons/fa";
 import {MdConstruction, MdContactSupport, MdElderly, MdHandshake, MdHelp, MdOutlineSupport} from "react-icons/md";
 import Link from "next/link";
+import {FaqItem} from "@/lib/interfaces/Faqs";
 
 export const metadata: Metadata = {
     title: "Our services | waypoint3 - Software development consultancy",
@@ -53,15 +54,52 @@ const services = [
         title: "Technical Support and Maintenance",
         text: "Offering ongoing technical support and maintenance services to ensure the continued performance and stability of software applications",
     }
+];
+
+const faqs: FaqItem[] = [
+    {
+        question: "What are cloud computing services?",
+        answer: "Cloud computing services refer to the delivery of computing resources—such as servers, storage," +
+            " databases, networking, software, and analytics—over the internet (\"the cloud\"). Rather than owning" +
+            " and maintaining physical infrastructure or servers, users can access these resources on-demand from" +
+            " cloud service providers, paying only for what they use."
+    },
+    {
+        question: "What is DevOps?",
+        answer: "DevOps is a software development methodology and cultural movement that emphasises collaboration," +
+            " communication, integration, and automation between software development (Dev) and IT operations (Ops)" +
+            " teams. "
+    },
+    {
+        question: "What is a software architect?",
+        answer: "A software architect is a senior-level role within a software development team responsible for" +
+            " designing and overseeing the architecture of software systems. The software architect plays a crucial" +
+            " role in defining the structure, components, modules, interfaces, and other architectural aspects of a" +
+            " software solution to ensure it meets the desired functional and non-functional requirements while" +
+            " aligning with the organisation's strategic objectives."
+    }
 ]
 
 export default function Page() {
-    const jsonLd = {
+    const jsonLd = [{
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         name: metadata.title,
         description: metadata.description,
-    };
+    }, {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((item) => {
+            return {
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: item.answer
+                }
+            }
+        })
+    }];
     return (
         <main>
             <PageTitle>

@@ -6,11 +6,30 @@ import {Container} from "@radix-ui/themes";
 import {FaChartLine} from "react-icons/fa";
 import PageTitle from "@/app/components/PageTitle";
 import Waypoint3 from "@/app/components/Waypoint3";
+import {FaqItem} from "@/lib/interfaces/Faqs";
 
 export const metadata: Metadata = {
     title: "waypoint3 - Software development consultancy",
     description: "Software development consultancy services to empower your business"
 }
+
+const faqs: FaqItem[] = [
+    {
+        question: "What is a software consultancy company?",
+        answer: "A software consultancy company, also known as a software consulting firm or simply a consultancy, is" +
+            " a type of business that provides expert advice, guidance, and services related to software development," +
+            " implementation, optimization, and management."
+    },
+    {
+        question: "Who are Waypoint3?",
+        answer: "Waypoint3 are highly skilled in software development, cloud computing services, legacy modernisation" +
+            " and DevOps practices."
+    },
+    {
+        question: "Where are Waypoint3 based?",
+        answer: "Waypoint3 are based in Leeds, West Yorkshire, United Kingdom."
+    },
+]
 
 export default function Home() {
     const jsonLd = {
