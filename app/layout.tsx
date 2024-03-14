@@ -29,13 +29,17 @@ export default function RootLayout({
         {
             "@context": "https://schema.org/",
             "@type": "Organization",
-            name: "Waypoint3 Ltd",
+            name: "Waypoint3",
             legalName: "Waypoint3 Ltd",
             url: "https://waypoint3.com",
             logo: {
                 '@type': 'ImageObject',
                 url: "https://waypoint3.com/img/waypoint3-black.svg"
             },
+            sameAs: [
+                "https://github.com/waypoint3",
+                "https://www.linkedin.com/company/waypoint3",
+            ]
         }
     ];
     return (
