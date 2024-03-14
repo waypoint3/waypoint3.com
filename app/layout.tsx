@@ -25,7 +25,7 @@ export default function RootLayout({
    }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const jsonLd = [
+    const jsonLd =
         {
             "@context": "https://schema.org/",
             "@type": "Organization",
@@ -41,7 +41,6 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/waypoint3",
             ]
         }
-    ];
     return (
         <html lang="en" className={`${roboto.variable} ${oswald.variable}`} suppressHydrationWarning>
         <body className={"bg-gray-800"}>
