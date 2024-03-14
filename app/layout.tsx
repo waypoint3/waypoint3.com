@@ -6,6 +6,7 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 import {Oswald, Roboto} from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const roboto = Roboto({
     weight: ["300", "400", "500", "700"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         </Providers>
         </body>
         <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
+        <SpeedInsights/>
         </html>
     );
 }
