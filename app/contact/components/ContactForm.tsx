@@ -108,7 +108,10 @@ export default function ContactForm() {
                         <TextField {...register("comments", {required: true})} label={"Your comments"} multiline rows={4}  aria-invalid={errors.comments ? "true" : "false"}/>
                         {errors.comments && <ValidationError>Please provide some comments</ValidationError>}
                     </FormInput>
-                    <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''} onChange={(val) => setCaptchaResponse(val ?? '')}/>
+                    <ReCAPTCHA
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
+                        onChange={(val) => setCaptchaResponse(val ?? '')}
+                    />
                     <Button variant={"contained"} type={"submit"}>
                         {loading ? (
                             <span className={"my-3"}>

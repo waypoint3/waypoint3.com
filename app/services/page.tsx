@@ -119,6 +119,27 @@ export default function Page() {
                 }
             }
         })
+    }, {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        serviceType: 'IT consulting',
+        'provider': {
+            '@type': 'Corporation',
+            name: 'Waypoint3 Ltd',
+        },
+        hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'IT Consultancy Services',
+            itemListElement: services.map(service => {
+                return {
+                    '@type': 'Offer',
+                    itemOffered: {
+                        '@type': 'Service',
+                        name: service.title
+                    }
+                }
+            })
+        }
     }];
     return (
         <main>
