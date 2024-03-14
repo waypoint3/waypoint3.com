@@ -118,7 +118,7 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container>
-                <p className={"text-sm mt-4 leading-6"}>
+                <p className={"text-sm mt-4 leading-6 text-center"}>
                     {introText}
                 </p>
                 <div className={"grid md:grid-cols-4 gap-10 my-10 px-3 md:px-0"}>

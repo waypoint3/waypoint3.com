@@ -93,7 +93,7 @@ export default function Home() {
             </Container>
         </PageTitle>
         <Container>
-            <p className={"text-sm leading-6"}>
+            <p className={"text-sm leading-6 text-center"}>
                 {introText}
             </p>
             <div className="my-5">
