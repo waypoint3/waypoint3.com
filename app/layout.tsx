@@ -32,10 +32,9 @@ export default function RootLayout({
             name: "Waypoint3",
             legalName: "Waypoint3 Ltd",
             url: "https://waypoint3.com",
-            logo: {
-                '@type': 'ImageObject',
-                url: "https://waypoint3.com/img/waypoint3-black.svg"
-            },
+            logo: "https://waypoint3.com/img/waypoint3-black.svg",
+            email: "contact@waypoint3.com",
+            description: "Software development consultancy firm",
             sameAs: [
                 "https://github.com/waypoint3",
                 "https://www.linkedin.com/company/waypoint3",
@@ -53,13 +52,14 @@ export default function RootLayout({
                 <Footer/>
             </Theme>
         </Providers>
+
+        </body>
+        <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
+        <SpeedInsights/>
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        </body>
-        <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
-        <SpeedInsights/>
         </html>
     );
 }
