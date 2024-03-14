@@ -11,7 +11,8 @@ import Faqs from "./components/Faqs";
 
 export const metadata: Metadata = {
     title: "waypoint3 - Software development consultancy",
-    description: "Software development consultancy services to empower your business"
+    description: "Empower your business with Waypoint3. Premier software consultancy for tailored solutions in" +
+        " development, IT consulting, and digital transformation."
 }
 
 const faqs: FaqItem[] = [
