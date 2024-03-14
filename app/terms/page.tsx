@@ -13,6 +13,10 @@ export default function Page() {
         '@type': 'WebPage',
         name: metadata.title,
         description: metadata.description,
+        image: {
+            '@type': 'ImageObject',
+            url: "https://waypoint3.com/img/waypoint3-black.svg"
+        }
     };
     return (
         <main>

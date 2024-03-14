@@ -48,7 +48,11 @@ export default function Home() {
         '@type': 'WebPage',
         name: metadata.title,
         description: metadata.description,
-        text: introText
+        text: introText,
+        image: {
+            '@type': 'ImageObject',
+            url: "https://waypoint3.com/img/waypoint3-black.svg"
+        }
     }, {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
