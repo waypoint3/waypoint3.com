@@ -25,13 +25,30 @@ export default function RootLayout({
    }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const jsonLd = [{
-        "@context": "https://schema.org/",
-        "@type": "Organization",
-        name: "Waypoint3 Ltd",
-        url: "https://waypoint3.com",
-        logo: "https://waypoint3.com/img/waypoint3-black.svg"
-    }];
+    const jsonLd = [
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            name: "Waypoint3",
+            url: "https://waypoint3.com",
+            potentialAction: {},
+            image: {
+                '@type': 'ImageObject',
+                url: "https://waypoint3.com/img/waypoint3-black.svg"
+            },
+        },
+        {
+            "@context": "https://schema.org/",
+            "@type": "Organization",
+            name: "Waypoint3 Ltd",
+            legalName: "Waypoint3 Ltd",
+            url: "https://waypoint3.com",
+            logo: {
+                '@type': 'ImageObject',
+                url: "https://waypoint3.com/img/waypoint3-black.svg"
+            },
+        }
+    ];
     return (
         <html lang="en" className={`${roboto.variable} ${oswald.variable}`} suppressHydrationWarning>
         <body className={"bg-gray-800"}>
