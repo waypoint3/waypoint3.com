@@ -52,14 +52,13 @@ export default function RootLayout({
                 <Footer/>
             </Theme>
         </Providers>
-
-        </body>
-        <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
         <SpeedInsights/>
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        </body>
+        <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
         </html>
     );
 }
