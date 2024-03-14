@@ -58,7 +58,7 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         </body>
-        <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
+        <GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER_ID ?? ''}/>
         </html>
     );
 }
