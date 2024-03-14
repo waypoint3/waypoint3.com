@@ -9,7 +9,7 @@ import {FaqItem} from "@/lib/interfaces/Faqs";
 import Faqs from "../components/Faqs";
 
 export const metadata: Metadata = {
-    title: "Our services | waypoint3 - Software development consultancy",
+    title: "Our services | waypoint3 - Software development consultancy in Leeds",
     description: "Find out how waypoint3 can help empower your business with our software development consultancy " +
         "services"
 }

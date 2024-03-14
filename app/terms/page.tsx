@@ -3,7 +3,7 @@ import PageTitle from "@/app/components/PageTitle";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: "Terms and conditions | waypoint3 - Software development consultancy",
+    title: "Terms and conditions | waypoint3 - Software development consultancy in Leeds",
     description: "Software development consultancy services to empower your business"
 }
 

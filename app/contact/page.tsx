@@ -4,7 +4,7 @@ import ContactForm from "@/app/contact/components/ContactForm";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: "Get in touch | waypoint3 - Software development consultancy",
+    title: "Get in touch | waypoint3 - Software development consultancy in Leeds",
     description: "Get in touch with waypoint3, ask us about our software development consultancy services"
 }
 export default function Page() {
