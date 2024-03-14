@@ -61,6 +61,7 @@ export default function ContactForm() {
             <Form
                 action={`/api/contact?res=${captchaResponse}`}
                 onSubmit={() => {
+                    setError(false);
                     setErrorMessage(null);
                     setLoading(true);
                 }}
