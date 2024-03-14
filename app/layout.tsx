@@ -25,6 +25,13 @@ export default function RootLayout({
    }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const jsonLd = [{
+        "@context": "https://schema.org/",
+        "@type": "Organization",
+        name: "Waypoint3 Ltd",
+        url: "https://waypoint3.com",
+        logo: "https://waypoint3.com/img/waypoint3-black.svg"
+    }];
     return (
         <html lang="en" className={`${roboto.variable} ${oswald.variable}`} suppressHydrationWarning>
         <body className={"bg-gray-800"}>
@@ -37,6 +44,10 @@ export default function RootLayout({
                 <Footer/>
             </Theme>
         </Providers>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         </body>
         <GoogleTagManager gtmId={"GTM-TVZ85WPM"}/>
         <SpeedInsights/>
