@@ -2,9 +2,10 @@
 
 import {TextField, Button, Alert} from "@mui/material";
 import {Form, SubmitHandler, useForm} from "react-hook-form";
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import {BarLoader, SyncLoader} from "react-spinners";
 import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 
 type Inputs = {
     name: string
@@ -45,7 +46,9 @@ export default function ContactForm() {
     } = useForm<Inputs>()
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState(null);
     const [sent, setSent] = useState(false);
+    const [captchaResponse, setCaptchaResponse] = useState("");
 
     if (sent) {
         return (
@@ -56,14 +59,24 @@ export default function ContactForm() {
     } else {
         return (
             <Form
-                action={"/api/contact"}
-                onSubmit={() => setLoading(true)}
+                action={`/api/contact?res=${captchaResponse}`}
+                onSubmit={() => {
+                    setErrorMessage(null);
+                    setLoading(true);
+                }}
                 onSuccess={() => {
                     setSent(true);
                     setLoading(false)
                 }}
-                onError={() => {
-                    setError(true);
+                onError={(res) => {
+                    if (res.response && res.response.status == 403) {
+                        res.response.json().then((json) => {
+                            setErrorMessage(json.message);
+                            setError(true);
+                        })
+                    } else {
+                        setError(true);
+                    }
                     setLoading(false);
                 }}
                 control={control}
@@ -71,8 +84,14 @@ export default function ContactForm() {
             >
                 {error &&
                     <Alert severity={"error"} className={"mb-3"}>
-                        There was a problem sending your comments. Please try again later or
-                        contact us via <Link href={"mailto:help@waypoint3.com"} className={"text-red-500"}>help@waypoint3.com</Link>
+                        {errorMessage ?
+                            <>{errorMessage}</>
+                            :
+                            <>
+                                There was a problem sending your comments. Please try again later or
+                                contact us via <Link href={"mailto:help@waypoint3.com"} className={"text-red-500"}>help@waypoint3.com</Link>
+                            </>
+                        }
                     </Alert>
                 }
                 <InputGroup>
@@ -88,6 +107,7 @@ export default function ContactForm() {
                         <TextField {...register("comments", {required: true})} label={"Your comments"} multiline rows={4}  aria-invalid={errors.comments ? "true" : "false"}/>
                         {errors.comments && <ValidationError>Please provide some comments</ValidationError>}
                     </FormInput>
+                    <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''} onChange={(val) => setCaptchaResponse(val ?? '')}/>
                     <Button variant={"contained"} type={"submit"}>
                         {loading ? (
                             <span className={"my-3"}>

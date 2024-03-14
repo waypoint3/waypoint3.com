@@ -1,7 +1,19 @@
 import Mailgun from "mailgun.js";
+import {NextRequest} from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     const formData = await request.formData();
+    const captchFormData = new URLSearchParams();
+    captchFormData.append("secret", process.env.RECAPTCHA_SECRET_KEY ?? '');
+    captchFormData.append("response", request.nextUrl.searchParams.get('res') ?? '');
+    const captchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+        method: "POST",
+        body: captchFormData
+    })
+    const captchaJson = await captchaResponse.json();
+    if (!captchaJson.success) {
+        return Response.json({message: "Failed Captcha challenge. Please try again."}, {status: 403});
+    }
     const mailgun = new Mailgun(FormData);
     const mg = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY ?? ''});
     try {
