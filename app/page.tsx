@@ -33,12 +33,14 @@ const faqs: FaqItem[] = [
     },
 ]
 
-const introText = "Welcome to Waypoint3, a leading software consultancy firm dedicated to driving your" +
-    " business forward through innovative technology solutions. At Waypoint3, we specialize in providing bespoke" +
-    " software development, IT consulting, and digital transformation services tailored to meet the unique needs of" +
-    " your organization. With a team of experienced professionals at the forefront of industry trends, we're" +
-    " committed to delivering results that exceed expectations. Partner with Waypoint3 and unlock the full potential" +
-    " of your business in today's dynamic digital landscape."
+const introText = "Welcome to Waypoint3, where innovation meets expertise in the realm of software" +
+    " consultancy. As a premier firm in the industry, Waypoint3 is dedicated to providing unparalleled solutions" +
+    " that drive businesses towards success in today's rapidly evolving digital landscape. With a team of seasoned" +
+    " professionals at the helm, we bring a wealth of experience and cutting-edge technology to every project we" +
+    " undertake. \n\nAt Waypoint3, we understand that every business is unique, which is why we offer tailored" +
+    " services to meet the specific needs and challenges of each client. Whether you're a startup looking to develop" +
+    " a groundbreaking app or an established enterprise seeking to optimize your IT infrastructure, our diverse range" +
+    " of services ensures that we have the expertise to address your requirements comprehensively."
 
 export default function Home() {
     const jsonLd = [{
@@ -94,9 +96,7 @@ export default function Home() {
             </Container>
         </PageTitle>
         <Container>
-            <p className={"text-sm leading-6 text-center"}>
-                {introText}
-            </p>
+            <p className={"text-sm leading-6 text-center"} dangerouslySetInnerHTML={{__html: introText.replace("\n", "<br /><br />")}}></p>
             <div className="my-5">
                 <Faqs faqs={faqs}/>
             </div>

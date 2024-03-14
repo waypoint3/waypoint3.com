@@ -81,12 +81,23 @@ const faqs: FaqItem[] = [
     }
 ];
 
-const introText = "Welcome to Waypoint3, your premier destination for top-tier software consultancy services." +
-    " At Waypoint3, we specialize in empowering businesses to navigate the complexities of the digital landscape with" +
-    " confidence and finesse. Our dedicated team of experts combines cutting-edge technology with strategic insights" +
-    " to deliver tailored solutions that propel your organization towards success. Whether you're seeking custom" +
-    " software development, IT consulting, or digital transformation guidance, Waypoint3 is your trusted partner" +
-    " every step of the way. Discover how our innovative approaches can elevate your business to new heights.";
+const introText = "Welcome to Waypoint3, a distinguished software consultancy firm dedicated to guiding" +
+    " businesses through the intricacies of digital transformation. At Waypoint3, we pride ourselves on offering a" +
+    " comprehensive suite of services tailored to meet the diverse needs of our clients. Our team of seasoned experts" +
+    " specializes in custom software development, IT consulting, project management, and digital strategy. With a" +
+    " relentless focus on innovation and excellence, we strive to empower organizations to harness the full potential" +
+    " of technology to drive growth and achieve their business objectives.\n" +
+    "\n" +
+    "In today's fast-paced digital landscape, businesses face unprecedented challenges and opportunities. At" +
+    " Waypoint3, we understand the importance of staying ahead of the curve and leveraging emerging technologies to" +
+    " gain a competitive edge. Whether you're a startup looking to build a disruptive product or an enterprise" +
+    " seeking to optimize your operations, our team has the expertise and experience to deliver solutions that align" +
+    " with your vision and objectives.\n" +
+    "\n" +
+    "Our approach is rooted in collaboration and partnership. We believe in working closely with our clients to gain" +
+    " a deep understanding of their unique challenges and goals. This allows us to develop tailored strategies and" +
+    " solutions that address their specific needs and deliver measurable results. From initial consultation to final" +
+    " implementation and beyond, we are committed to providing unparalleled support and guidance every step of the way."
 
 export default function Page() {
     const jsonLd = [{
@@ -118,9 +129,6 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container>
-                <p className={"text-sm mt-4 leading-6 text-center"}>
-                    {introText}
-                </p>
                 <div className={"grid md:grid-cols-4 gap-10 my-10 px-3 md:px-0"}>
                     {services.map(service => (
                         <div key={service.title} className={"text-center flex flex-col gap-1 items-center"}>
@@ -133,6 +141,8 @@ export default function Page() {
                 <div className={"text-center my-5"}>
                     <Link href={"/contact"} className={"bg-green-600 text-white px-3 py-2 rounded-xl font-semibold text-lg"}>Contact us today</Link>
                 </div>
+                <p className={"text-sm mt-10 leading-6 text-center"} dangerouslySetInnerHTML={{__html: introText.replace("\n", "<br /><br />")}}></p>
+
                 <div className="mt-10 mb-4">
                     <Faqs faqs={faqs}/>
                 </div>
