@@ -32,12 +32,20 @@ const faqs: FaqItem[] = [
     },
 ]
 
+const introText = "Welcome to Waypoint3, a leading software consultancy firm dedicated to driving your" +
+    " business forward through innovative technology solutions. At Waypoint3, we specialize in providing bespoke" +
+    " software development, IT consulting, and digital transformation services tailored to meet the unique needs of" +
+    " your organization. With a team of experienced professionals at the forefront of industry trends, we're" +
+    " committed to delivering results that exceed expectations. Partner with Waypoint3 and unlock the full potential" +
+    " of your business in today's dynamic digital landscape."
+
 export default function Home() {
     const jsonLd = [{
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         name: metadata.title,
         description: metadata.description,
+        text: introText
     }, {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -85,6 +93,9 @@ export default function Home() {
             </Container>
         </PageTitle>
         <Container>
+            <p className={"text-sm leading-6"}>
+                {introText}
+            </p>
             <div className="my-5">
                 <Faqs faqs={faqs}/>
             </div>

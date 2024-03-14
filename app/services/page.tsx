@@ -79,7 +79,14 @@ const faqs: FaqItem[] = [
             " software solution to ensure it meets the desired functional and non-functional requirements while" +
             " aligning with the organisation's strategic objectives."
     }
-]
+];
+
+const introText = "Welcome to Waypoint3, your premier destination for top-tier software consultancy services." +
+    " At Waypoint3, we specialize in empowering businesses to navigate the complexities of the digital landscape with" +
+    " confidence and finesse. Our dedicated team of experts combines cutting-edge technology with strategic insights" +
+    " to deliver tailored solutions that propel your organization towards success. Whether you're seeking custom" +
+    " software development, IT consulting, or digital transformation guidance, Waypoint3 is your trusted partner" +
+    " every step of the way. Discover how our innovative approaches can elevate your business to new heights.";
 
 export default function Page() {
     const jsonLd = [{
@@ -87,6 +94,7 @@ export default function Page() {
         '@type': 'WebPage',
         name: metadata.title,
         description: metadata.description,
+        text: introText
     }, {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -110,6 +118,9 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container>
+                <p className={"text-sm mt-4 leading-6"}>
+                    {introText}
+                </p>
                 <div className={"grid md:grid-cols-4 gap-10 my-10 px-3 md:px-0"}>
                     {services.map(service => (
                         <div key={service.title} className={"text-center flex flex-col gap-1 items-center"}>
@@ -122,7 +133,7 @@ export default function Page() {
                 <div className={"text-center my-5"}>
                     <Link href={"/contact"} className={"bg-green-600 text-white px-3 py-2 rounded-xl font-semibold text-lg"}>Contact us today</Link>
                 </div>
-                <div className="my-5">
+                <div className="mt-10 mb-4">
                     <Faqs faqs={faqs}/>
                 </div>
             </Container>
