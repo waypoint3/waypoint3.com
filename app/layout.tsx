@@ -28,17 +28,6 @@ export default function RootLayout({
     const jsonLd = [
         {
             "@context": "https://schema.org/",
-            "@type": "WebSite",
-            name: "Waypoint3",
-            url: "https://waypoint3.com",
-            potentialAction: {},
-            image: {
-                '@type': 'ImageObject',
-                url: "https://waypoint3.com/img/waypoint3-black.svg"
-            },
-        },
-        {
-            "@context": "https://schema.org/",
             "@type": "Organization",
             name: "Waypoint3 Ltd",
             legalName: "Waypoint3 Ltd",
