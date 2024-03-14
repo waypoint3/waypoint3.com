@@ -3,9 +3,10 @@ import {Container} from "@radix-ui/themes";
 import {Metadata} from "next";
 import Waypoint3 from "@/app/components/Waypoint3";
 import {FaCloud, FaCode, FaProjectDiagram, FaServer} from "react-icons/fa";
-import {MdConstruction, MdContactSupport, MdElderly, MdHandshake, MdHelp, MdOutlineSupport} from "react-icons/md";
+import {MdConstruction, MdElderly, MdHandshake, MdOutlineSupport} from "react-icons/md";
 import Link from "next/link";
 import {FaqItem} from "@/lib/interfaces/Faqs";
+import Faqs from "../components/Faqs";
 
 export const metadata: Metadata = {
     title: "Our services | waypoint3 - Software development consultancy",
@@ -120,6 +121,9 @@ export default function Page() {
                 </div>
                 <div className={"text-center my-5"}>
                     <Link href={"/contact"} className={"bg-green-600 text-white px-3 py-2 rounded-xl font-semibold text-lg"}>Contact us today</Link>
+                </div>
+                <div className="my-5">
+                    <Faqs faqs={faqs}/>
                 </div>
             </Container>
             <script

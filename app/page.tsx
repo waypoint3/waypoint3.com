@@ -7,6 +7,7 @@ import {FaChartLine} from "react-icons/fa";
 import PageTitle from "@/app/components/PageTitle";
 import Waypoint3 from "@/app/components/Waypoint3";
 import {FaqItem} from "@/lib/interfaces/Faqs";
+import Faqs from "./components/Faqs";
 
 export const metadata: Metadata = {
     title: "waypoint3 - Software development consultancy",
@@ -32,12 +33,25 @@ const faqs: FaqItem[] = [
 ]
 
 export default function Home() {
-    const jsonLd = {
+    const jsonLd = [{
         '@context': 'https://schema.org',
         '@type': 'WebPage',
         name: metadata.title,
         description: metadata.description,
-    };
+    }, {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((item) => {
+            return {
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: item.answer
+                }
+            }
+        })
+    }];
   return (
     <main>
         <div className={"bg-cover md:h-80 h-64 bg-center relative overflow-hidden bg-black flex items-center justify-center"}>
@@ -70,6 +84,11 @@ export default function Home() {
                 </h3>
             </Container>
         </PageTitle>
+        <Container>
+            <div className="my-5">
+                <Faqs faqs={faqs}/>
+            </div>
+        </Container>
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
