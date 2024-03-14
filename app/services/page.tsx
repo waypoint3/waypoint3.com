@@ -56,6 +56,12 @@ const services = [
 ]
 
 export default function Page() {
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: metadata.title,
+        description: metadata.description,
+    };
     return (
         <main>
             <PageTitle>
@@ -78,6 +84,10 @@ export default function Page() {
                     <Link href={"/contact"} className={"bg-green-600 text-white px-3 py-2 rounded-xl font-semibold text-lg"}>Contact us today</Link>
                 </div>
             </Container>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
         </main>
     )
 }

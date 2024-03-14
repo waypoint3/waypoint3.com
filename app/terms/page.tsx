@@ -8,6 +8,12 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: metadata.title,
+        description: metadata.description,
+    };
     return (
         <main>
             <PageTitle>
@@ -98,6 +104,10 @@ export default function Page() {
                     <li>By visiting this page on our website: <a href="https://waypoint3.com/contact" rel="external nofollow noopener" target="_blank">https://waypoint3.com/contact</a></li>
                 </ul>
             </Container>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
         </main>
     )
 }

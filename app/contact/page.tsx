@@ -8,6 +8,12 @@ export const metadata: Metadata = {
     description: "Get in touch with waypoint3, ask us about our software development consultancy services"
 }
 export default function Page() {
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: metadata.title,
+        description: metadata.description,
+    };
     return (
         <main>
             <PageTitle>
@@ -18,6 +24,10 @@ export default function Page() {
             <Container className={"p-3"}>
                 <ContactForm/>
             </Container>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
         </main>
     )
 }

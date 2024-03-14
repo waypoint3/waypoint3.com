@@ -13,6 +13,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: metadata.title,
+        description: metadata.description,
+    };
   return (
     <main>
         <div className={"bg-cover md:h-80 h-64 bg-center relative overflow-hidden bg-black flex items-center justify-center"}>
@@ -45,6 +51,10 @@ export default function Home() {
                 </h3>
             </Container>
         </PageTitle>
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
     </main>
   );
 }
