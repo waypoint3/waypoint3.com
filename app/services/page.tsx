@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         "services"
 }
 
-export const services = [
+const services = [
     {
         icon: <FaCode className={"w-20 h-20"}/>,
         title: "Software Development",

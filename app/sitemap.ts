@@ -6,6 +6,17 @@ type SitemapPage = {
     priority: number
 }
 
+const services: string[] = [
+    "cloud-computing-services",
+    "consultancy",
+    "dev-ops",
+    "legacy-system-modernisation",
+    "project-management",
+    "software-architecture",
+    "software-development",
+    "technical-support-maintenance",
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const pages: SitemapPage[] = [
         {
@@ -34,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5
         }
     ];
+    services.forEach((service) => {
+        pages.push({
+            url: `/services/${service}`,
+            changeFrequency: "monthly",
+            priority: "0.8",
+        } as SitemapPage);
+    });
     return pages.map((page) => {
         return {
             url: `https://waypoint3.com${page.url}`,
