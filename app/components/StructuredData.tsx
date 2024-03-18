@@ -1,7 +1,7 @@
 import { stripHtml } from "string-strip-html";
 
 export default function StructuredData({json}: {json: any}) {
-    const recursiveStrip = (obj) => {
+    const recursiveStrip = (obj: any) => {
         for (let key in obj) {
             if (typeof obj[key] === 'object') {
                 if (Array.isArray(obj[key])) {

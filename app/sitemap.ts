@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         pages.push({
             url: `/services/${service}`,
             changeFrequency: "monthly",
-            priority: "0.8",
+            priority: 0.8,
         } as SitemapPage);
     });
     return pages.map((page) => {
