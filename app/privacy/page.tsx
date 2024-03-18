@@ -1,6 +1,7 @@
 import {Container} from "@radix-ui/themes";
 import PageTitle from "@/app/components/PageTitle";
 import {Metadata} from "next";
+import Breadcrumbs, {BreadcrumbType} from "@/app/components/Breadcrumbs";
 
 export const metadata: Metadata = {
     title: "Privacy policy | waypoint3 - Software development consultancy",
@@ -18,6 +19,16 @@ export default function Page() {
             url: "https://waypoint3.com/img/waypoint3-black.svg"
         }
     };
+    const breadcrumbs: BreadcrumbType[] = [
+        {
+            text: "Home",
+            href: "/",
+        },
+        {
+            text: "Privacy Policy",
+            href: "/privacy",
+        },
+    ];
     return (
         <main>
             <PageTitle>
@@ -26,6 +37,7 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container className={"text-sm leading-loose px-3 md:px-0"}>
+                <Breadcrumbs links={breadcrumbs}/>
                 <p className={"text-right italic my-3"}>Last updated: March 06, 2024</p>
                 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
                 <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.</p>

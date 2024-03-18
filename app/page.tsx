@@ -8,6 +8,8 @@ import PageTitle from "@/app/components/PageTitle";
 import Waypoint3 from "@/app/components/Waypoint3";
 import {FaqItem} from "@/lib/interfaces/Faqs";
 import Faqs from "./components/Faqs";
+import styles from "./page.module.css";
+import StructuredData from "@/app/components/StructuredData";
 
 export const metadata: Metadata = {
     title: "waypoint3 - Software development consultancy in Leeds",
@@ -20,11 +22,11 @@ const faqs: FaqItem[] = [
         question: "What is a software consultancy company?",
         answer: "A software consultancy company, also known as a software consulting firm or simply a consultancy, is" +
             " a type of business that provides expert advice, guidance, and services related to software development," +
-            " implementation, optimization, and management."
+            " implementation, optimization, and <a href='/services/project-management'>project management</a>."
     },
     {
         question: "Who are Waypoint3?",
-        answer: "Waypoint3 are highly skilled in software development, cloud computing services, legacy modernisation" +
+        answer: "Waypoint3 are highly skilled in <a href='/services/software-development'>software development</a>, <a href='/services/cloud-computing-services'>cloud computing services</a>, <a href='/services/legacy-system-modernisation'>legacy modernisation</a>" +
             " and DevOps practices."
     },
     {
@@ -33,13 +35,13 @@ const faqs: FaqItem[] = [
     },
 ]
 
-const introText = "Welcome to Waypoint3, where innovation meets expertise in the realm of software" +
-    " consultancy. As a premier firm in the industry, Waypoint3 is dedicated to providing unparalleled solutions" +
+const introText = "Welcome to Waypoint3, where innovation meets expertise in the realm of <a href='/services/consultancy'>software" +
+    " consultancy</a>. As a premier firm in the industry, Waypoint3 is dedicated to providing unparalleled solutions" +
     " that drive businesses towards success in today's rapidly evolving digital landscape. With a team of seasoned" +
     " professionals at the helm, we bring a wealth of experience and cutting-edge technology to every project we" +
     " undertake. \n\nAt Waypoint3, we understand that every business is unique, which is why we offer tailored" +
-    " services to meet the specific needs and challenges of each client. Whether you're a startup looking to develop" +
-    " a groundbreaking app or an established enterprise seeking to optimize your IT infrastructure, our diverse range" +
+    " <a href='/services'>services</a> to meet the specific needs and challenges of each client. Whether you're a startup looking to develop" +
+    " a groundbreaking app or an established enterprise seeking to optimize your <a href='/services/dev-ops'>IT infrastructure</a>, our diverse range" +
     " of services ensures that we have the expertise to address your requirements comprehensively."
 
 export default function Home() {
@@ -100,15 +102,12 @@ export default function Home() {
             </Container>
         </PageTitle>
         <Container>
-            <p className={"text-sm leading-6 text-center"} dangerouslySetInnerHTML={{__html: introText.replace("\n", "<br /><br />")}}></p>
-            <div className="my-5">
+            <p className={`text-sm leading-6 text-center ${styles.introText}`} dangerouslySetInnerHTML={{__html: introText.replace("\n", "<br /><br />")}}></p>
+            <div className={`my-5 ${styles.faqs}`}>
                 <Faqs faqs={faqs}/>
             </div>
         </Container>
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <StructuredData json={jsonLd}/>
     </main>
   );
 }

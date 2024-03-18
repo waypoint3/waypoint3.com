@@ -6,7 +6,7 @@ import {usePathname} from "next/navigation";
 
 export default function NavigationDesktop() {
     const pathName = usePathname();
-    const isActive = (path: string) => path === pathName;
+    const isActive = (path: string) => (new RegExp(path)).test(pathName);
     return (
         <nav className={"ml-5 hidden md:block"}>
             <ul className={"flex"}>

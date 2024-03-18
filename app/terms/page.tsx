@@ -1,6 +1,7 @@
 import {Container} from "@radix-ui/themes";
 import PageTitle from "@/app/components/PageTitle";
 import {Metadata} from "next";
+import Breadcrumbs, {BreadcrumbType} from "@/app/components/Breadcrumbs";
 
 export const metadata: Metadata = {
     title: "Terms and conditions | waypoint3 - Software development consultancy in Leeds",
@@ -18,6 +19,16 @@ export default function Page() {
             url: "https://waypoint3.com/img/waypoint3-black.svg"
         }
     };
+    const breadcrumbs: BreadcrumbType[] = [
+        {
+            text: "Home",
+            href: "/",
+        },
+        {
+            text: "Terms and Conditions",
+            href: "/terms",
+        },
+    ];
     return (
         <main>
             <PageTitle>
@@ -26,6 +37,7 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container className={"text-sm leading-loose px-3 md:px-0"}>
+                <Breadcrumbs links={breadcrumbs}/>
                 <p className={"text-right italic my-3"}>Last updated: March 06, 2024</p>
                 <p>Please read these terms and conditions carefully before using Our Service.</p>
                 <h2 className={"font-display text-2xl mb-1 mt-2"}>Interpretation and Definitions</h2>
