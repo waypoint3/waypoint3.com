@@ -6,7 +6,7 @@ function Faq({faq}: {faq: FaqItem}) {
     return (
         <div className={"text-sm font-sans"}>
             <h3 className={"font-semibold mb-1"}>{faq.question}</h3>
-            <p className={"leading-5"}>{faq.answer}</p>
+            <p className={"leading-5"} dangerouslySetInnerHTML={{__html: faq.answer}}></p>
         </div>
     )
 }

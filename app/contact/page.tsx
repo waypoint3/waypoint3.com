@@ -2,6 +2,7 @@ import PageTitle from "@/app/components/PageTitle";
 import {Container} from "@radix-ui/themes";
 import ContactForm from "@/app/contact/components/ContactForm";
 import {Metadata} from "next";
+import Breadcrumbs, {BreadcrumbType} from "@/app/components/Breadcrumbs";
 
 export const metadata: Metadata = {
     title: "Get in touch | waypoint3 - Software development consultancy in Leeds",
@@ -18,6 +19,16 @@ export default function Page() {
             url: "https://waypoint3.com/img/waypoint3-black.svg"
         }
     };
+    const breadcrumbs: BreadcrumbType[] = [
+        {
+            text: "Home",
+            href: "/",
+        },
+        {
+            text: "Get in touch",
+            href: "/contact",
+        },
+    ];
     return (
         <main>
             <PageTitle>
@@ -26,6 +37,7 @@ export default function Page() {
                 </Container>
             </PageTitle>
             <Container className={"p-3"}>
+                <Breadcrumbs links={breadcrumbs}/>
                 <ContactForm/>
             </Container>
             <script
