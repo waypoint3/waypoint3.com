@@ -95,7 +95,7 @@ const faqs: FaqItem[] = [
 const introText = "Welcome to Waypoint3, a distinguished software consultancy firm dedicated to guiding" +
     " businesses through the intricacies of digital transformation. At Waypoint3, we pride ourselves on offering a" +
     " comprehensive suite of services tailored to meet the diverse needs of our clients. Our team of seasoned experts" +
-    " specializes in <a href=\"/services/software-development\">custom software development</a>, <a href='/services/consulting'>IT consulting</a>, <a href='/services/project-management'>project management</a>, and digital strategy. With a" +
+    " specializes in <a href=\"/services/software-development\">custom software development</a>, <a href='/services/consultancy'>IT consulting</a>, <a href='/services/project-management'>project management</a>, and digital strategy. With a" +
     " relentless focus on innovation and excellence, we strive to empower organizations to harness the full potential" +
     " of technology to drive growth and achieve their business objectives.\n" +
     "\n" +
