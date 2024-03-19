@@ -1,4 +1,4 @@
-[![Waypoint3 logo](/public/img/waypoint3-white.svg)](https://waypoint3.com)
+[![Waypoint3 logo](/public/img/waypoint3-black.svg)](https://waypoint3.com)
 
 ## Getting Started
 
