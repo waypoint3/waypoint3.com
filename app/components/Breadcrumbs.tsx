@@ -45,7 +45,7 @@ export default function Breadcrumbs({
                     '@type': 'ListItem',
                     position: String(index + 1).toString(),
                     name: link.text,
-                    item: process.env.SITE_URL + link.href
+                    item: process.env.NEXT_PUBLIC_SITE_URL + link.href
                 }
             }
         })
